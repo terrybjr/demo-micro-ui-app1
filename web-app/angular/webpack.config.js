@@ -3,7 +3,7 @@ const deps = require("./package.json").dependencies;
 
 module.exports = {
   output: {
-    publicPath: "http://localhost:4200/",
+    publicPath: "http://localhost:4201/",
   },
   optimization: {
     runtimeChunk: false,
@@ -13,9 +13,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "root",
-      remotes: {
-        nav: "nav@http://localhost:4201/remoteEntry.js",
+      name: "nav",
+      filename: "remoteEntry.js",
+      exposes: {
+        './NavComponent': './src/app/components/nav/nav.component.ts',
       },
       shared: {
         ...deps,

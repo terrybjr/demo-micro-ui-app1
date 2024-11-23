@@ -3,7 +3,7 @@
         <feature>jakartaee-9.1</feature>
         <feature>mpOpenAPI-3.0</feature>
     </featureManager>
-    <httpEndpoint id="defaultHttpEndpoint" httpPort="9081" httpsPort="9444"/>
+    <httpEndpoint id="defaultHttpEndpoint" httpPort="9082" httpsPort="9445"/>
     <!--   This serves static web content. In order to deploy the application locally, use either angular
      live reload, or manually copy the war to the target/liberty/usr/defaultServer/dropins
     <webApplication id="btd-app-ui"
