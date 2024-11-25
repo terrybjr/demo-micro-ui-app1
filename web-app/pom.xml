@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.micro-ui</groupId>
-        <artifactId>demo-micro-ui-root</artifactId>
+        <artifactId>demo-micro-ui-app1</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>web-app</artifactId>
-    <name>Archetype - web-app</name>
+    <artifactId>web-app1</artifactId>
+    <name>web-app</name>
     <packaging>war</packaging>
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -24,7 +24,7 @@
     </dependencies>
 
     <build>
-        <finalName>btd-app-ui</finalName>
+        <finalName>web-app1</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -41,6 +41,15 @@
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <warSourceDirectory>WebContent</warSourceDirectory>
+                    <webResources>
+                        <resource>
+                            <directory>${project.basedir}/angular/dist/angular/browser</directory>
+                            <targetPath>/</targetPath>
+                            <includes>
+                                <include>**/*</include>
+                            </includes>
+                        </resource>
+                    </webResources>
                 </configuration>
             </plugin>
             <plugin>
@@ -73,12 +82,8 @@
                             <workingDirectory>${project.basedir}/angular</workingDirectory>
                             <arguments>
                                 <argument>build</argument>
-                                <argument>-c production</argument>
-                                <argument>--aot</argument>
                                 <argument>--base-href</argument>
-                                <argument>/</argument>
-                                <argument>--output-path</argument>
-                                <argument>${project.build.directory}/${project.build.finalName}</argument>
+                                <argument>/app1</argument>
                             </arguments>
                         </configuration>
                     </execution>

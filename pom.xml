@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.micro-ui</groupId>
-  <artifactId>demo-micro-ui-nav</artifactId>
+  <artifactId>demo-micro-ui-app1</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>demo-micro-ui-nav</name>
+  <name>demo-micro-ui-app1</name>
   <modules>
     <module>web-app</module>
   </modules>
